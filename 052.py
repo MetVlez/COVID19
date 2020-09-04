@@ -14,6 +14,11 @@ for location in locations:
     print(location)
 
 #Tener un listado tuyo de paises y siglas
-paises = 
+paises = [
+  ["Mexico","MX"],
+  ["United states","US"],
+  ....
+
+]
 
 
