@@ -13,7 +13,7 @@ print("Hola :D")
 # aaaa-mm-dd hh:mm:ss
 # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
 DB.date = pd.to_datetime(DB.date, format="%Y-%m-%d %H:%M:%S")
-DB=DB.sort_values( 'date', ascending=True )
-print(DB.date)
-
+DB = DB.sort_values( 'date', ascending=True )
+for i in DB:
+    print(i)
 #print("la fecha más antigua es:", DB.sort_values('date',ascending=False))
