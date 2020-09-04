@@ -8,7 +8,7 @@ DB = pd.read_csv("covid19_tweets.csv")
 print("Las columnas son",DB.keys())
 #print(pd.read_csv("covid19_tweets.csv")
 print("FECHAS",type(DB.date[1]))
-
+print("Hola :D")
 DB=DB.sort_values( 'date', ascending=False )
 
 #print("la fecha más antigua es:", DB.sort_values(('date'),ascending=(False))
