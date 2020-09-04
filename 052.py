@@ -10,15 +10,10 @@ print("Las columnas son",DB.keys())
 #print(DB["user_location"])
 #Lizeth
 locations = list(set(DB["user_location"].values))
-for location in locations:
-    print(location)
+#print(len(locations),len(DB["user_location"]))
+locations = 
 
+
+for user_location in DB["user_location"].values:
+  print(user_location)
 #Tener un listado tuyo de paises y siglas
-paises = [
-  ["Mexico","MX"],
-  ["United states","US"],
-  ....
-
-]
-
-
