@@ -9,11 +9,12 @@ DB = pd.read_csv("covid19_tweets.csv")
 print("Las columnas son",DB.keys())
 #print(DB["user_location"])
 #Lizeth
-locations = list(set(DB["user_location"].values))
 #print(len(locations),len(DB["user_location"]))
-locations = 
-
-
+locations = {}
+for location in list(set(DB["user_location"].values)):
+  locations[location] = 0
 for user_location in DB["user_location"].values:
-  print(user_location)
-#Tener un listado tuyo de paises y siglas
+  locations[user_location] += 1
+
+for location in locations:
+  print(location,".....Total de usuarios:",locations[location])
