@@ -7,4 +7,4 @@ from operator import attrgetter
 
 DB = pd.read_csv("covid19_tweets.csv")
 print("Las columnas son",DB.keys())
-print(DBu[""])
+print(DB["user_location"])
