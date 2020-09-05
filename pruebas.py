@@ -4,13 +4,17 @@ import math
 import pandas as pd
 from datetime import datetime
 
+DB = pd.read_csv("covid19_tweets.csv")
+print("Las columnas son",DB.keys())
+#print("usuario",type(DB.user_name[1]))
 
-def dias():
-    return 0
-formato = "%d/%m/%Y"
-#primera fecha de un Twitter d1 (año, mes, día)
-dia1=datetime.strptime('01/01/2020',formato)
-#d2=input('Qué día es hoy? (dd/mm/aaaa)')
-dia2=datetime(input('Qué día es hoy? (dd/mm/aaaa)',datetime.strptime(dia2, formato))
-diferencia = abs(dia2 - dia1)
-print("días transcurridos:", diferencia.days, "días")
+
+usuarios = {}
+for usuario in list(set(DB["user_name"].values)):
+  usuarios[usuario] = 0
+for user_name in DB["user_name"].values:
+  usuarios[user_name] += 1
+
+for usuario in usuarios:
+  #print(usuario,".....Total de tweets por usuario:",usuarios[usuario])
+  print(max(usuarios,key=lambda i: usuarios[i]))

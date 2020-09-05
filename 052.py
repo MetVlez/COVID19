@@ -17,4 +17,4 @@ for user_location in DB["user_location"].values:
   locations[user_location] += 1
 
 for location in locations:
-  print(location,".....Total de usuarios:",locations[location])
+  print(location,".....Total de tweets en la ciudad:",locations[location])

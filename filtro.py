@@ -14,10 +14,9 @@ def tiempoTranscurrido(date):
 
 DB = pd.read_csv("covid19_tweets.csv")
 print("Las columnas son",DB.keys())
-#print(pd.read_csv("covid19_tweets.csv")
-print(DB)
+#print(DB)
 print("FECHAS",type(DB.date[1]))
-print("Hola :D")
+print(len(DB.date))
 # aaaa-mm-dd hh:mm:ss
 # https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
 DB.date = pd.to_datetime(DB.date)
@@ -28,6 +27,6 @@ for  i in range(5):
     print(DB["date"][i],tiempoTranscurrido(DB["date"][i]))
 
 
-#print("la fecha más antigua es:", DB.sort_values('date',ascending=False))
+
 
 
